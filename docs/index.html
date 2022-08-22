@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="stylesheet" href="dist/css/styles.css" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script src="dist/js/bundle.js"></script>
+
+  <title>SoCIT General Assembly 2022 | FasticFrame</title>
+  <meta name="description" content="A simple tool to create framed profile pictures for social media in support of a cause. Dynamically generate a static site based off of the number of frame images provided.">
+  <link rel="icon" href="img/favicon.ico">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SoCIT General Assembly 2022" />
+	<meta property="og:description" content="SoCIT General Assembly 2022" />
+	<meta property="og:url" content="https://jpcsapc.github.io/socitga22-frame" />
+	<meta property="og:image" content="https://jpcsapc.github.io/socitga22-frame/img/og-image.png" />
+	<meta property="og:image:width" content="1280" />
+	<meta property="og:image:height" content="640" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description" content="Create your framed profile picture for the SoCIT General Assembly 2022!" />
+	<meta name="twitter:image" content="https://jpcsapc.github.io/socitga22-frame/img/og-image.png" />
+	<meta name="twitter:site" content="@jpcs_apc" />
+</head>
+
+  <body class="bg-white">
+    <div class="min-h-screen bg-white">
+      
+      <nav class="bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-center h-24">
+      <div class="flex-shrink md:flex-shrink-0 flex items-center">
+        <img src="img/socit-orgs.png" class="md:h-12">
+      </div>
+    </div>
+  </div>
+</nav>
+<h1 class="font-bold text-3xl leading-8 text-center">
+  SoCIT General Assembly 2022
+</h1>
+
+
+      <div class="text-primary">
+        <main>
+          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="px-4 py-8 sm:px-16">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24">
+                <div>
+  <div>
+    <ol class="instructions">
+      <li class="text-lg leading-5 font-medium">
+        Upload your picture or another square image below.
+          <div id="upload" class="mt-4 p-6 w-full bg-gray-100 text-center rounded-2xl cursor-pointer hover:bg-primary hover:text-white transition duration-200 ease-in-out">
+            <span id="upload-text">Drop files here or click to upload.</span>
+          </div>
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        Use the photo tools to scale, rotate, and move your image over the preview.
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        Download your new profile picture:
+
+        <button class="block w-full mt-4 px-8 py-5 rounded-2xl bg-primary text-white font-bold text-center" id="download" disabled>
+          Download your new profile picture
+        </button>
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        Post on social media with the following as your caption!
+
+        <div class="block mt-4 p-4 md:p-8 rounded-2xl bg-gray-100 select-all">
+          <div id="caption" class="break-words">
+            <p class="mb-5">𝚄0𝟿𝙳𝚂𝚅𝚀 𝚁0𝚅𝙾𝚁𝚅𝙹𝙱𝚃𝙰 𝚀𝚅𝙽𝚃𝚁𝚄𝟷𝙲𝚃𝙵𝚔</p>
+          
+            <p class="mb-5">👩‍💻👨‍💻 SOCIT GENERAL ASSEMBLY 2022 💾</p>
+          
+            <p class="mb-5">🤔 Were you able to guess the mystery word?<br> 💻 It was encoded using Base64, a “binary-to-text encoding scheme”!<br> 😏 If not, better luck next time!</p>
+          
+            <p class="mb-5">In collaboration with the SoCIT Organizations of Asia Pacific College, we are inviting everyone to join this event this coming August 22, 2022, from 1:00 PM – 4:30 PM. We would love you to come and meet with our fellow members, which will surely make you feel at home and a part of our organizations.</p>
+          
+            <p class="mb-5">We’ll tackle many topics related to Information Technology (IT), the industry, and the benefits that you’ll gain if you choose to be a member of one of the SoCIT organizations. You’ve got a lot to choose from: Junior Philippine Computer Society (JPCS-APC), Junior Information Systems Security Association (JISSA), Microsoft Community (APC-MSC), and Gaming Genesis.</p>
+          
+            <p class="mb-5">The assembly will be held inside the school, at the APC Multipurpose Hall 1 (MPH1), and on Microsoft Teams, for those who’d prefer to join us online.</p>
+          
+            <p class="mb-5">📌 Register now and learn more about everything that we have in store for you!</p>
+          
+            <p class="mb-5">http://tinyurl.com/SoCITGA22-RegForm</p>
+          
+            <p class="mb-5">#BeARam<br>#SoCITGeneralAssembly</p>
+          </div>
+        </div>
+        <button class="block w-full mt-4 px-8 py-5 rounded-2xl bg-primary text-white font-bold text-center" id="copyCaptionBtn">
+          Copy to Clipboard
+        </button>
+      </li>
+
+      </ol>
+
+  </div>
+</div>
+
+
+                <div class="mb-12 md:mb-0 order-first md:order-none">
+  <canvas id="c" class="rounded-2xl"></canvas>
+
+  <div class="controls w-full">
+    <div class="pt-6">
+      <label for="angle-control" class="text-lg font-medium leading-5">Rotation:</label>
+      <input type="range" id="angle-control" value="0" min="0" max="360" class="w-full" disabled>
+    </div>
+    <div class="pt-6">
+      <label for="scale-control" class="text-lg font-medium leading-5">Scale:</label>
+      <input type="range" id="scale-control" value="50" min="1" max="100" class="w-full" disabled>
+    </div>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <footer class="bg-white">
+  <div class="max-w-screen-xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="mt-12 border-t border-gray-200 pt-8">
+      <p class="text-base leading-6 text-center">
+        &copy; 2022 Junior Philippine Computer Society - Asia Pacific College. All rights reserved.
+      </p>
+      <p class="text-xs text-center text-gray-400 mt-1">
+        Interested in using FasticFrame for your own campaign?
+        <a class="underline hover:text-primary" href="https://github.com/jpcsapc/fasticframe">View the source code</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
