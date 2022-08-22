@@ -132,18 +132,6 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("upload-text").innerHTML = "Drop files here or click to upload.";
   });
 
-  // Change the canvas frames
-  // one per frame
-  // add your frames here
-
-  {% for image in site.static_files %}
-      {% if image.path contains 'frames/' %}
-          document.getElementById("{{ image.basename }}").addEventListener("click", function (){
-            changeFrame(canvas, '{{ image.path | relative_url }}');
-          });
-      {% endif %}
-  {% endfor %}
-
   // handle download
   // create a link and simulate a click to download the file
   var download = document.getElementById("download");
