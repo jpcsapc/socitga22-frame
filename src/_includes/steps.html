@@ -23,8 +23,8 @@
       <li class="text-lg leading-5 font-medium pt-12">
         {{ site.step-4 }}
 
-        <div class="block mt-4 p-8 rounded-2xl bg-gray-100 select-all">
-          <div id="caption">{% for line in site.caption-lines %}
+        <div class="block mt-4 p-4 md:p-8 rounded-2xl bg-gray-100 select-all">
+          <div id="caption" class="break-words">{% for line in site.caption-lines %}
             <p class="mb-5">{{ line }}</p>
           {% endfor %}</div>
         </div>
