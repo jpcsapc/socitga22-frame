@@ -13,53 +13,38 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Avatar Framer
+title: SoCIT General Assembly 2022 | FasticFrame
 description: >- # this means to ignore newlines"
   A simple tool to create framed profile pictures for social media in support of a cause.
   Dynamically generate a static site based off of the number of frame images provided.
 
+repository-link: "https://github.com/jpcsapc/fasticframe"
+
 # Copy
 # Fill in your copy for the title and steps here
 # 
-title-text: "Show you’re on #TeamBartlet by helping get out the vote on social media!"
+title-text: "SoCIT General Assembly 2022"
 step-1: "Upload your picture or another square image below."
 step-2: "Use the photo tools to scale, rotate, and move your image over the preview."
-step-3: "Select your frame."
-step-4: "Download your new profile image!"
-step-5: "Post on social media using the hashtag #TeamBartlet."
-footer-text: "&copy; 2020 Campaign Works, Inc. All rights reserved."
+step-3: "Download your new profile picture:"
+step-4: "Post on social media with the following as your caption!"
 
-# Header Nav Link
-#
-nav-link: "http://google.com"
-nav-link-text: "Donate"
+footer-text: "&copy; 2022 Junior Philippine Computer Society - Asia Pacific College. All rights reserved."
 
 # Buttons and upload form
-# 
+#
 upload-text: "Drop files here or click to upload."
-download-button-text: "Download profile picture"
+download-button-text: "Download your new profile picture"
 
 # Logo & Favicon
 # 
 logo: "logo.png"
 favicon: "favicon.ico"
 
-# Footer links
-# 
-footer-links:
-  - text: "Awesome page 1"
-    link: "http://google.com"
-
-  - text: "Other page 2"
-    link: "http://google.com"
-
-  - text: "Things!"
-    link: "http://google.com"
-
 # Open Graph and Twitter Cards
 #
-og-title: Create your own avatar generating website
-og-description: Create your own avatar generating website
+og-title: SoCIT General Assembly 2022
+og-description: SoCIT General Assembly 2022
 og-url: https://andrewquinn.ca/avatar-framer
 og-image: "og-image.png"
 og-image-width: 1280
@@ -68,6 +53,25 @@ twitter-card: summary_large_image
 twitter-description: Create your own avatar generating website
 twitter-image: "og-image.png"
 twitter-handle: "@AndrewQuinn2"
+
+caption-lines:
+  - 𝚄0𝟿𝙳𝚂𝚅𝚀 𝚁0𝚅𝙾𝚁𝚅𝙹𝙱𝚃𝙰 𝚀𝚅𝙽𝚃𝚁𝚄𝟷𝙲𝚃𝙵𝚔
+  - 👩‍💻👨‍💻 SOCIT GENERAL ASSEMBLY 2022 💾
+  - "<br>"
+  - 🤔 Were you able to guess the mystery word?
+  - 💻 It was encoded using Base64, a “binary-to-text encoding scheme”!
+  - 😏 If not, better luck next time!
+  - "<br>"
+  - "In collaboration with the SoCIT Organizations of Asia Pacific College, we are inviting everyone to join this event this coming August 22, 2022, from 1:00 PM – 4:30 PM. We would love you to come and meet with our fellow members, which will surely make you feel at home and a part of our organizations."
+  - "<br>"
+  - "We’ll tackle many topics related to Information Technology (IT), the industry, and the benefits that you’ll gain if you choose to be a member of one of the SoCIT organizations. You’ve got a lot to choose from: Junior Philippine Computer Society (JPCS-APC), Junior Information Systems Security Association (JISSA), Microsoft Community (APC-MSC), and Gaming Genesis."
+  - "<br>"
+  - "The assembly will be held inside the school, at the APC Multipurpose Hall 1 (MPH1), and on Microsoft Teams, for those who’d prefer to join us online."
+  - "<br>"
+  - 📌 Register now and learn more about everything that we have in store for you!
+  - http://tinyurl.com/SoCITGA22-RegForm
+  - "#BeARam"
+  - "#SoCITGeneralAssembly"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
