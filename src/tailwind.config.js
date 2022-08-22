@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: {
     enabled: true,
@@ -11,15 +13,15 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: '#1e429f',
-          dark: '#233876',
+          DEFAULT: '#00214B',
+          dark: '#00214B',
         },
         secondary: {
-          DEFAULT: "#e02424",
+          DEFAULT: "#FFCC00",
         }
       },
       fontFamily: {
-        'sans': ['Rubik','Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
   },
