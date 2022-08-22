@@ -29,8 +29,8 @@ ol.instructions > li::before {
 }
 
 #download:disabled {
-  @apply bg-gray-200;
-  cursor: default;
+  cursor: not-allowed;
+  @apply opacity-30;
 }
 
 
