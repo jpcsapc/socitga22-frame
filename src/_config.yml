@@ -57,21 +57,16 @@ twitter-handle: "@AndrewQuinn2"
 caption-lines:
   - 𝚄0𝟿𝙳𝚂𝚅𝚀 𝚁0𝚅𝙾𝚁𝚅𝙹𝙱𝚃𝙰 𝚀𝚅𝙽𝚃𝚁𝚄𝟷𝙲𝚃𝙵𝚔
   - 👩‍💻👨‍💻 SOCIT GENERAL ASSEMBLY 2022 💾
-  - "<br>"
-  - 🤔 Were you able to guess the mystery word?
-  - 💻 It was encoded using Base64, a “binary-to-text encoding scheme”!
-  - 😏 If not, better luck next time!
-  - "<br>"
+  - >-
+    🤔 Were you able to guess the mystery word?<br>
+    💻 It was encoded using Base64, a “binary-to-text encoding scheme”!<br>
+    😏 If not, better luck next time!
   - "In collaboration with the SoCIT Organizations of Asia Pacific College, we are inviting everyone to join this event this coming August 22, 2022, from 1:00 PM – 4:30 PM. We would love you to come and meet with our fellow members, which will surely make you feel at home and a part of our organizations."
-  - "<br>"
   - "We’ll tackle many topics related to Information Technology (IT), the industry, and the benefits that you’ll gain if you choose to be a member of one of the SoCIT organizations. You’ve got a lot to choose from: Junior Philippine Computer Society (JPCS-APC), Junior Information Systems Security Association (JISSA), Microsoft Community (APC-MSC), and Gaming Genesis."
-  - "<br>"
   - "The assembly will be held inside the school, at the APC Multipurpose Hall 1 (MPH1), and on Microsoft Teams, for those who’d prefer to join us online."
-  - "<br>"
   - 📌 Register now and learn more about everything that we have in store for you!
   - http://tinyurl.com/SoCITGA22-RegForm
-  - "#BeARam"
-  - "#SoCITGeneralAssembly"
+  - "#BeARam<br>#SoCITGeneralAssembly"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
