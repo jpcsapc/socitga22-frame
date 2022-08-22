@@ -145,6 +145,17 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
   }, false);
+
+  var copyCaptionBtn = document.getElementById('copyCaptionBtn');
+  copyCaptionBtn.addEventListener('click', function (aEvent) {
+    let range = document.createRange();
+    let captionBlock = document.getElementById("caption");
+    range.selectNode(captionBlock);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+  }, false);
 });
 
 
