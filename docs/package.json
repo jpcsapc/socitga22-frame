@@ -1,0 +1,37 @@
+{
+  "name": "fasticframe",
+  "version": "1.0.0a1",
+  "description": "",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.3.1",
+    "browserify": "^17.0.0",
+    "dropzone": "5.7.2",
+    "fabric": "^5.2.1",
+    "tailwindcss": "^2.2.7",
+    "terser": "^5.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babelify": "^10.0.0",
+    "copyfiles": "^2.4.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.0.0"
+  },
+  "scripts": {
+    "js": "browserify _site/assets/js/main.js -t babelify --outfile _site/dist/js/bundle.js",
+    "min": "terser _site/dist/js/bundle.js --compress --mangle -o _site/dist/js/bundle.js",
+    "css": "postcss _site/assets/css/styles.css -o _site/dist/css/styles.css",
+    "copy-dist": "copyfiles -u 2 _site/dist/js/* dist && copyfiles -u 2 _site/dist/css/* dist",
+    "build": "bundle exec jekyll build && npm run js && npm run css && npm run min && npm run copy-dist",
+    "build-debug": "bundle exec jekyll build && npm run js && npm run css && npm run copy-dist",
+    "build-docs": "npm run build && rsync -av * ../docs/ --exclude index.html --exclude _config.yml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
